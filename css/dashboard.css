@@ -1,0 +1,268 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header {
+    background-color: rgb(6, 6, 207);
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    padding: 10px 10px;
+    border-bottom: solid 5px yellow;
+}
+
+.left-menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.left-menu h4{
+    font-size: 20px;
+    color: white;
+}
+
+.profile {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+}
+
+.right-menu{
+    display: flex;
+    gap: 10px;
+}
+
+.right-menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+.account {
+    position: relative;
+}
+
+.account-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    display: none;
+    list-style: none;
+    background: white;
+    border-radius: 8px;
+    min-width: 160px;
+    padding: 8px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+}
+
+.dropdown-menu a:hover{
+    text-decoration: underline;
+}
+
+.show{
+    display: block;
+}
+
+.account-icon {
+    color: white;
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.menu-btn{
+    display: none;
+}
+
+body{
+    background: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+.sidebar{
+    width: 230px;
+    background: white;
+    padding: 20px 0;
+    border-right: 2px solid #333;
+}
+.sidebar-menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-menu li{
+    margin: 8px 15px;
+}
+.sidebar-menu li a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #333;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: .3s;
+}
+.sidebar-menu li a:hover{
+    background: #4facfe;
+    color: white;
+}
+.sidebar-menu i{
+    width: 20px;
+    text-align: center;
+}
+.dashboard-content {
+    flex: 1;
+    padding: 40px;
+}
+.dashboard-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    height: 100%;
+}
+.dashboard-box{
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.dashboard-box h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.dashboard-box:hover{
+    background-color: #eaf6ff;
+    transform: translateY(-5px);
+}
+footer{
+    background-color: rgb(6, 6, 207);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 10px 10px;
+    border-top: solid 5px yellow;
+}
+
+.left-side{
+    text-align: start;
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+}
+
+@media (max-width: 768px){
+    header{
+        height: 60px;
+        padding: 10px;
+    }
+    .menu-btn{
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .left-menu h4{
+        font-size: 16px;
+    }
+
+    .profile{
+        width: 35px;
+        height: 35px;
+    }
+    main{
+        flex-direction: column;
+    }
+    .sidebar{
+        display: none;
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #333;
+    }
+    .sidebar.active{
+        left:0;
+    }
+    .sidebar.show{
+        display: block;
+    }
+
+    .sidebar-menu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar-menu li{
+        margin: 5px;
+        min-width: max-content;
+    }
+
+    .sidebar-menu li a{
+        padding: 10px 15px;
+    }
+
+
+    /* DASHBOARD */
+    .dashboard-content{
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+
+    .dashboard-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 15px;
+    }
+
+
+    .dashboard-box{
+        min-height: 180px;
+        transition: 0.3s;
+    }
+
+
+    /* FOOTER */
+    footer{
+        height: auto;
+        padding: 15px;
+    }
+
+    .left-side{
+        font-size: 10px;
+    }
+
+}

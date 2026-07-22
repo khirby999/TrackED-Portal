@@ -1,0 +1,294 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(6, 6, 207);
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    padding: 10px 10px;
+    border-bottom: solid 5px yellow;
+}
+
+.left-menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+}
+
+.left-menu h4{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.right-menu{
+    display: flex;
+    gap: 20px;
+}
+
+.right-menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.right-menu a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+body{
+    background-image: url(../images/buildiing.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    max-height: 100vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 40px 100px;
+    gap: 50px;
+}
+
+.welcome-content {
+    width: 100%;
+    max-width: 450px;
+    color: white;
+}
+
+.welcome-content h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+        -2px  0px 0 #000,
+         2px  0px 0 #000,
+         0px -2px 0 #000,
+         0px  2px 0 #000;
+}
+
+.welcome-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+    text-shadow:
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+        -2px  0px 0 #000,
+         2px  0px 0 #000,
+         0px -2px 0 #000,
+         0px  2px 0 #000;
+}
+
+.login-container{
+    background-color: white;
+    height: 350px;
+    width: 100%;
+    max-width: 300px;
+    padding-inline: 10px;
+    padding-block: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h2{
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    background: #f5f5f5;
+    transition: 0.3s;
+}
+
+.input-group:focus-within {
+    border-color: #4facfe;
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.3);
+}
+
+.icon {
+    color: #777;
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.input-group input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+}
+
+.input-group::placeholder {
+    color: #999;
+}
+
+.input-group input:focus {
+    border-color: #4facfe;
+    outline: none;
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.4);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #007bff;
+    transform: translateY(-2px);
+}
+
+.toggle-password {
+    color: #777;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.toggle-password:hover{
+    color: #4facfe;
+}
+
+.forgot-password {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.forgot-password a{
+    color: #4facfe;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+footer{
+    background-color: rgb(6, 6, 207);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 10px 10px;
+    border-top: solid 5px yellow;
+}
+
+.left-side{
+    text-align: start;
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+}
+
+
+@media (max-width: 768px){
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .left-menu h4 {
+        font-size: 16px;
+    }
+
+    header{
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .right-menu{
+        justify-content:center;
+        gap: 6px;
+    }
+
+    .right-menu a{
+        font-size: 10px;
+    }
+
+    main{
+        flex-direction:column;
+        padding:30px 20px;
+    }
+
+    .welcome-content{
+        width:100%;
+        margin-bottom:30px;
+    }
+
+    .welcome-content h1{
+        font-size:32px;
+    }
+
+    .welcome-content p{
+        font-size:16px;
+    }
+
+    .login-container{
+        width:100%;
+        max-width:350px;
+    }
+
+    footer{
+        justify-content:center;
+        text-align:center;
+    }
+}
