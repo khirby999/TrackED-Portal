@@ -33,7 +33,6 @@ main{
 }
 .table-container{
     width:100%;
-    overflow-x:auto;
 }
 .courses-page{
     flex:1;
@@ -132,15 +131,16 @@ footer{
 @media(max-width:600px){
 
     .courses-table{
+        padding:0;
         background:transparent;
         box-shadow:none;
-        padding:0;
     }
 
-    .course-table,
-    .course-table tbody,
-    .course-table tr,
-    .course-table td{
+    .table-container{
+        overflow:visible;
+    }
+
+    .course-table{
         display:block;
         width:100%;
     }
@@ -149,26 +149,25 @@ footer{
         display:none;
     }
 
+    .course-table tbody{
+        display:block;
+        width:100%;
+    }
+
     .course-table tr{
+        display:block;
         background:white;
-        border-radius:15px;
-        margin-bottom:15px;
+        margin-bottom:20px;
         padding:15px;
-        box-shadow:0 4px 15px rgba(0,0,0,.08);
+        border-radius:15px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.08);
     }
 
     .course-table td{
-        border:none;
-        padding:8px 0;
-        text-align:left;
-    }
-
-    .course-table td::before{
-        font-weight:bold;
-        color:#555;
         display:block;
-        margin-bottom:3px;
-        font-size:13px;
+        width:100%;
+        padding:8px 0;
+        border:none;
     }
 
     .course-table td:nth-child(1)::before{
@@ -187,11 +186,18 @@ footer{
         content:"Lessons";
     }
 
-    .lesson-btn{
-        width:100%;
-        text-align:center;
-        box-sizing:border-box;
-        margin-top:5px;
+    .course-table td::before{
+        display:block;
+        font-size:12px;
+        font-weight:bold;
+        color:#666;
+        margin-bottom:3px;
     }
 
+    .lesson-btn{
+        width:100%;
+        display:block;
+        text-align:center;
+        box-sizing:border-box;
+    }
 }
