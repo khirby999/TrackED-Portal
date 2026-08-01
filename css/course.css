@@ -131,33 +131,67 @@ footer{
 
 @media(max-width:600px){
 
-    header{
-        height:60px;
-        padding:0 15px;
-    }
-
-    main,
-    .courses-page{
-        padding:15px;
-    }
-
-    .summary-card{
-        padding:15px;
-    }
-
     .courses-table{
-        padding:10px;
+        background:transparent;
+        box-shadow:none;
+        padding:0;
     }
 
-    th,
-    td{
-        padding:10px;
-        font-size:14px;
+    .course-table,
+    .course-table tbody,
+    .course-table tr,
+    .course-table td{
+        display:block;
+        width:100%;
+    }
+
+    .course-table thead{
+        display:none;
+    }
+
+    .course-table tr{
+        background:white;
+        border-radius:15px;
+        margin-bottom:15px;
+        padding:15px;
+        box-shadow:0 4px 15px rgba(0,0,0,.08);
+    }
+
+    .course-table td{
+        border:none;
+        padding:8px 0;
+        text-align:left;
+    }
+
+    .course-table td::before{
+        font-weight:bold;
+        color:#555;
+        display:block;
+        margin-bottom:3px;
+        font-size:13px;
+    }
+
+    .course-table td:nth-child(1)::before{
+        content:"Course Code";
+    }
+
+    .course-table td:nth-child(2)::before{
+        content:"Course Name";
+    }
+
+    .course-table td:nth-child(3)::before{
+        content:"Instructor";
+    }
+
+    .course-table td:nth-child(4)::before{
+        content:"Lessons";
     }
 
     .lesson-btn{
-        padding:7px 12px;
-        font-size:13px;
+        width:100%;
+        text-align:center;
+        box-sizing:border-box;
+        margin-top:5px;
     }
 
 }
