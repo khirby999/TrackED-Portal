@@ -16,14 +16,13 @@ header {
     box-sizing:border-box;
 }
 header h2{
-    color:white;
+    font-size:clamp(20px,4vw,26px);
 }
 body{
     margin:0;
     background:#f5f7fb;
     font-family:'Poppins',sans-serif;
-    height:100vh;
-    overflow:hidden;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
 }
@@ -32,17 +31,22 @@ main{
     padding:30px;
     overflow-y:auto;
 }
+.table-container{
+    width:100%;
+    overflow-x:auto;
+}
 .courses-page{
     flex:1;
     padding:30px;
-    overflow-y:auto;
+    width:100%;
+    box-sizing:border-box;
 }
 .courses-page h2{
     margin-bottom:20px;
 }
 .course-summary{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
     margin-bottom:30px;
 }
@@ -125,18 +129,35 @@ footer{
     box-sizing:border-box;
 }
 
-@media (max-width:900px){
+@media(max-width:600px){
 
-    .course-summary{
-        grid-template-columns:repeat(2,1fr);
+    header{
+        height:60px;
+        padding:0 15px;
     }
 
-}
+    main,
+    .courses-page{
+        padding:15px;
+    }
 
-@media (max-width:600px){
+    .summary-card{
+        padding:15px;
+    }
 
-    .course-summary{
-        grid-template-columns:1fr;
+    .courses-table{
+        padding:10px;
+    }
+
+    th,
+    td{
+        padding:10px;
+        font-size:14px;
+    }
+
+    .lesson-btn{
+        padding:7px 12px;
+        font-size:13px;
     }
 
 }
