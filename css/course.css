@@ -1,0 +1,142 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: rgb(6, 6, 207);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 5px yellow;
+    flex-shrink:0;
+    width:100%;
+    height:70px;
+    padding:0 30px;
+    box-sizing:border-box;
+}
+header h2{
+    color:white;
+}
+body{
+    margin:0;
+    background:#f5f7fb;
+    font-family:'Poppins',sans-serif;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+}
+main{
+    flex:1;
+    padding:30px;
+    overflow-y:auto;
+}
+.courses-page{
+    flex:1;
+    padding:30px;
+    overflow-y:auto;
+}
+.courses-page h2{
+    margin-bottom:20px;
+}
+.course-summary{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.summary-card{
+    background:#fff;
+    border-radius:15px;
+    padding:18px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.summary-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.summary-card i{
+    font-size:28px;
+    color:#4F46E5;
+}
+
+.summary-card span{
+    font-size:13px;
+    color:#666;
+}
+
+.summary-card h2{
+    margin:5px 0 0;
+}
+.courses-table{
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#f4f6fb;
+    text-align:left;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+.lesson-btn{
+    display:inline-block;
+    background:#4F46E5;
+    color:#fff;
+    padding:8px 16px;
+    border-radius:8px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.lesson-btn:hover{
+    background:#4338CA;
+}
+footer{
+    background-color: rgb(6, 6, 207);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 5px yellow;
+    flex-shrink:0;
+    width:100%;
+    height:70px;
+    padding:0 30px;
+    box-sizing:border-box;
+}
+
+@media (max-width:900px){
+
+    .course-summary{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:600px){
+
+    .course-summary{
+        grid-template-columns:1fr;
+    }
+
+}

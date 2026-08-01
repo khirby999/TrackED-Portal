@@ -1,0 +1,73 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    background-color: rgb(6, 6, 207);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 5px yellow;
+    flex-shrink:0;
+    width:100%;
+    height:70px;
+    padding:0 30px;
+    box-sizing:border-box;
+}
+.lesson-page{
+    padding:30px;
+}
+
+.lesson-page h2{
+    margin-bottom:20px;
+}
+
+.lesson-container{
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#f4f6fb;
+    text-align:left;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+.download-btn{
+    background:#16A34A;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#15803D;
+}
+footer{
+    background-color: rgb(6, 6, 207);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 5px yellow;
+    flex-shrink:0;
+    width:100%;
+    height:70px;
+    padding:0 30px;
+    box-sizing:border-box;
+
+}
