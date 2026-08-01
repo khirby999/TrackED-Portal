@@ -20,6 +20,7 @@ header h2{
 }
 body{
     margin:0;
+    background-color: white;
     background:#f5f7fb;
     font-family:'Poppins',sans-serif;
     height:100vh;
