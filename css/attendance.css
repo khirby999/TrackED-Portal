@@ -95,6 +95,20 @@ table{
     width:100%;
     border-collapse:collapse;
 }
+.table-container{
+    width:100%;
+    overflow-x:auto;
+    display:block;
+}
+
+.table-container table{
+    width:700px;
+    border-collapse:collapse;
+}
+
+.table-container table{
+    min-width:700px;
+}
 th{
     background:#f4f6fb;
     padding:15px;
@@ -231,26 +245,26 @@ footer{
 
 }
 
-@media(max-width:1000px){
-
-    .attendance-summary{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .chart-card{
-        grid-column:span 2;
-    }
-
-}
-
 @media(max-width:650px){
 
-    .attendance-summary{
-        grid-template-columns:1fr;
+    .attendance-page{
+        padding:15px;
+        overflow-x:hidden;
     }
 
-    .chart-card{
-        grid-column:span 1;
+    .attendance-table{
+        width:100%;
+        overflow:hidden;
+    }
+
+    .table-container{
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    th,
+    td{
+        white-space:nowrap;
     }
 
 }

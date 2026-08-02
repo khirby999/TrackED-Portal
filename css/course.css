@@ -17,6 +17,7 @@ header {
 }
 header h2{
     font-size:clamp(20px,4vw,26px);
+    color:white;
 }
 body{
     margin:0;
@@ -129,7 +130,9 @@ footer{
 }
 
 @media(max-width:600px){
-
+    h2{
+        color: white;
+    }
     .courses-table{
         padding:0;
         background:transparent;
