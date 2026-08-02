@@ -10,12 +10,93 @@
 </head>
 <body>
     <header>
-        <h2>Quizzes</h2>
+        <div class="header-left">
+            <a href="../dashboard.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h2>Quizzes</h2>
+        </div>
     </header>
 
-    <body>
+    <main class="quizzes-page">
+        <div class="quizzes-summary">
+            <div class="card">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                    <span>Graded Quizzes</span>
+                    <h2>20</h2>
+                </div>
+            </div>
 
-    </body>
+            <div class="card">
+                <i class="fa-solid fa-circle-xmark"></i>
+                <div>
+                    <span>Missed Quizzes</span>
+                    <h2>4</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-star"></i>
+                <div>
+                    <span>Average Score</span>
+                    <h2>90%</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="quizzes-table">
+            <div class="table-header">
+                <h2>Quizzes History</h2>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Quiz</th>
+                        <th>Course</th>
+                        <th>Date</th>
+                        <th>Score</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Quiz 1</td>
+                        <td>Software Engineering</td>
+                        <td>July 25, 2026</td>
+                        <td>18/20</td>
+                        <td><span class="graded">Graded</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Quiz 2</td>
+                        <td>Database System</td>
+                        <td>July 27, 2026</td>
+                        <td>20/20</td>
+                        <td><span class="graded">Graded</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Quiz 3</td>
+                        <td>Networking</td>
+                        <td>July 30, 2026</td>
+                        <td>-</td>
+                        <td><span class="missed">Missed</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>Quiz 4</td>
+                        <td>Programming</td>
+                        <td>August 1, 2026</td>
+                        <td>19/20</td>
+                        <td><span class="graded">Graded</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
 
     <footer>
 
